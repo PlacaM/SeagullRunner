@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Caca
   - PlayerSpawnController
+  - Deco
   layers:
   - Default
   - TransparentFX

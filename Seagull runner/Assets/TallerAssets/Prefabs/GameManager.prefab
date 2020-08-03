@@ -58,6 +58,9 @@ MonoBehaviour:
   timer: 0.01
   fases: 0
   playerSpeed: 25
+  SiguienteNivel: 2
+  Nopasa: 0
+  player: {fileID: 0}
 --- !u!1 &6727382262911112396
 GameObject:
   m_ObjectHideFlags: 0

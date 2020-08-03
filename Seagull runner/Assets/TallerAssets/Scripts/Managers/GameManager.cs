@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public int coinScore;
+    public static int coinScore;
     public TextMeshProUGUI coinScoreText;
     public bool gameOver;
     public GameObject canvasGameOver;
@@ -94,19 +94,37 @@ public class GameManager : MonoBehaviour
 
         if (score > 200 && fases == 1)
         {
+            playerSpeed = 40;
+            fases++;
+        }
+
+        if (score > 200 && fases == 2)
+        {
+            playerSpeed = 45;
+            fases++;
+        }
+
+        if (score > 300 && fases == 3)
+        {
+            playerSpeed = 50;
+            fases++;
+        }
+
+        if (score > 400 && fases == 4)
+        {
             playerSpeed = 55;
             fases++;
         }
 
-        if (score > 400 && fases == 2)
+        if (score > 500 && fases == 5)
         {
-            playerSpeed = 75;
+            playerSpeed = 60;
             fases++;
         }
 
-        if (score > 600 && fases == 3)
+        if (score > 600 && fases == 6)
         {
-            playerSpeed = 85;
+            playerSpeed = 65;
             fases++;
         }
 
@@ -115,6 +133,7 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+        coinScoreText.SetText(coinScore.ToString());
         highScoreText.text = PlayerPrefs.GetInt("highScore", 0).ToString();
         //sacar comentario de la linea de abajo para borrar highScore paso 1
         //PlayerPrefs.DeleteKey("highScore");
@@ -135,7 +154,7 @@ public class GameManager : MonoBehaviour
         deadScoreText.GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt
             (timer * 6).ToString();
 
-        if(score >= 800 && Nopasa==false)
+        if(score >= 70 && Nopasa==false)
         {
             player.SetActive(false);
             coinScore = PlayerPrefs.GetInt("Coin");

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -453,6 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580500bd8943d2e49bb09137a8be9f10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  remainCoinText: {fileID: 1325127142}
   Caca: {fileID: 5297852345345507843, guid: f5360be836010244f8d8a72f68a7d763, type: 3}
   cacaSpeed: 5000
   posCaca: {fileID: 1278775979}
@@ -2154,7 +2155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022c088155a38a240a94d8b2dc15c678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinScore: 0
   coinScoreText: {fileID: 0}
   gameOver: 0
   canvasGameOver: {fileID: 0}
